@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>限制WebKit引擎的特性</title>
+		<style>
+			.nocallout {
+				-webkit-touch-callout: none;
+			}
+			#targetarea{
+				width: 200px;
+				height: 120px;
+				padding-top: 80px;
+				background: #CCCCCC;
+				text-align: center;
+				font-size: 20px;
+			}
+			
+			/*
+			 限制应用的复制粘贴
+			 * */
+			.oncopy{
+				-webkit-user-select: text;
+			}
+			
+			/*
+			 修改点击之后的背景颜色
+			 * */
+			*{
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			
+			/**
+			 * 让文本区的内容可编辑
+			 * 
+			 */
+			textarea.contenteditable{
+				-webkit-appearance: none;
+			}
+			
+			/**
+			 * 为狭窄的屏幕添加省略号功能
+			 */
+			.ellipsis{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+		</style>
+	</head> 
+	<body>
+		<div id="targetarea" class="nocallout">
+			<a href="http://www.google.com" target="_blank">Google</a>
+		</div>
+		<br />
+		<textarea>
+			
+		</textarea>
+		<br />
+		<select class="ellipsis">
+			<option class="ellipsis">
+				<ul>
+					<li>11111111111111111111111111111111111111111111111111</li>
+				</ul>
+			</option>
+			<option>
+				<ul>
+					<li>222222222222222222222222222222222222222222222222222</li>
+				</ul>
+			</option>
+			<option>
+				<ul>
+					<li>3333333333333333333333</li>
+				</ul>
+			</option>
+			<option>
+				<ul>
+					<li>44444444444444444444444</li>
+				</ul>
+			</option>
+		</select>
+	</body>
+</html>

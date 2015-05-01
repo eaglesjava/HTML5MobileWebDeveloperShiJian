@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+		<title>15009366004</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				background: #FFFFA6;
+			}
+			#main section{
+				display: block;
+				border: 5px solid #29D9C2;
+				widows: 60%;
+				height: 120px;
+				margin: 5% auto;
+			}
+			@media only screen and (min-width: 480px) {
+				#main{
+					widows: 90%;
+					margin: 0 auto;
+				}
+				#main > section:first-child{
+					margin-right: 5%;
+				}
+				#main section{
+					float: left;
+					width: 45%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="main">
+				<section id="top-news"></section>
+				<section id="sports"></section>
+			</div>
+		</div>
+	</body>
+	<script src="js/modernizr.min.js"></script>
+</html>
